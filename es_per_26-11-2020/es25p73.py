@@ -1,8 +1,14 @@
+'''
+A un concorso pubblico hanno partecipato due candidati 
+prima in ordine alfabetico e poi in ordine decrescente 
+di punteggio.
+'''
 nomi = []
 voti = []
 
 for x in range(2):
-    p = input("come si chiama il canditato? (solo cognome e lettera maiuscola) ")
+    p = input("come si chiama il canditato? (solo cognome) ")
+    p.lower()
     v = int(input("quanti voti ha? "))
     nomi.append(p)
     voti.append(v)

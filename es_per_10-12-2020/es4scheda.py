@@ -1,8 +1,11 @@
+'''
+Scrivi un programma che a scelta dall'utente calcoli l'area di un quadrato, rettangolo
+triangolo e cerchio
+'''
 from math import pi
-
 poligono = input("Quale area di un poligono vuoi sapere? ")
 
-if poligono == "quadrato" or "Quarato":
+if poligono == "quadrato" or "Quadrato":
 
     linea = input("Cosa mi dai? (perimetro o diagonale o lato) ")
 
@@ -23,6 +26,7 @@ if poligono == "quadrato" or "Quarato":
 
     print("L'area è:", l, "cm^2")
 
+
 elif poligono == "Cerchio" or "cerchio":
 
     linea = input ("Cosa mi dai? (raggio o diametro) ")
@@ -36,8 +40,16 @@ elif poligono == "Cerchio" or "cerchio":
     
     print ("l'area è", lunghezza**2*pi, "cm^2")
 
+
+elif poligono == "Triangolo" or "triangolo":
+
+    l = float(input("Qual è la base? (in cm) "))
+    l2 = float(input("Qual è l'altezza? (in cm) "))
+    print("l'area del triangolo è ", l * l2/2, "cm^2")
+
+
 else:
 
     l = float(input("Qual è la base? (in cm) "))
     l2 = float(input("Qual è l'altezza? (in cm) "))
-    print(l * l2)
+    print("l'area del rettangolo è", l * l2, "cm^2")

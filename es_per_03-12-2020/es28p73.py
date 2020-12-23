@@ -1,3 +1,9 @@
+'''
+Dato un elenco di studenti partecipanti a una gara sportiva
+di lancio del peso (nome studente, lancio), visualizza il valore 
+del lancio del vincitore (valore massimo).
+'''
+
 punti = []
 print("per bloccare il programma prema -1")
 
