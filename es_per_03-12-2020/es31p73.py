@@ -28,7 +28,11 @@ def dec_bin (num):
         dec_bin(num//2)
         
     print(num%2, end = "")
+    
+try:
+    i = int(input("che numero vuoi convertire in codice binario? "))
 
-i = int(input("che numero vuoi convertire in codice binario? "))
+except:
+    print('''scriva un numero senza nessun spazio''')
 
 convertitore(i)

@@ -12,13 +12,16 @@ del linguaggio per convertire un numero binario in decimale.
 '''
 
 num = 0
+try:
 
-lunghezza = int(input("Quanto è lungo il numero binario? "))
+    lunghezza = int(input("Quanto è lungo il numero binario? "))
 
-for l in range(lunghezza):
+    for l in range(lunghezza):
 
-    cif = int(input("Scirvi la cifra da destra verso sinistra "))
-    dec = cif*2**l
-    num += dec 
+        cif = int(input("Scirvi la cifra da destra verso sinistra "))
+        dec = cif*2**l
+        num += dec 
     
-print(num)
+    print(num)
+except:
+    print('''scriva un numero senza nessun spazio''')

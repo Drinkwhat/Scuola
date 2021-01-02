@@ -11,19 +11,26 @@ comunica il numero delle città registrato nel contatore.
 '''
 città1 = []
 print("per bloccare il programma prema -1")
+try:
+    escurs = float(input("Qual è valore di escursione di riferimento? "))
 
-escurs = float(input("Qual è valore di escursione di riferimento? "))
+    while True:
 
-while True:
+        città = input("Qual è il nome della città? ")
+    
 
-    città = input("Qual è il nome della città? ")
-    mi = float(input("Qual è la temperatura minima? "))
-    ma = float(input("Qual è la temperatura massima? "))
+        mi = float(input("Qual è la temperatura minima? "))
+        ma = float(input("Qual è la temperatura massima? "))
 
-    if   ma - mi > escurs:
-        città1.append(città)
+        if   ma - mi > escurs:
+            città1.append(città)
         
-    elif ma - mi == -1:
-        break
+        elif ma - mi == -1:
+            break
 
-print(len(città1))
+
+    print(len(città1))
+    
+except:
+        print('''scriva un numero senza nessun spazio''',
+        '''o lo scriva con "." al posto ","''')

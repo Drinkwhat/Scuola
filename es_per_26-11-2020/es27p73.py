@@ -5,15 +5,17 @@ con una ripetizione che termina quando si inserisce 0 come
 segnalazione della fine dell'input dei dati. 
 Comunica il totale dei veicoli transitati nel periodo considerato.
 '''
+try:
+    veicoli_entrati = 0
 
-veicoli_entrati = 0
+    while True:
+        veicoli = int(input("Quante veicoli sono entrati oggi? "))
 
-while True:
-    veicoli = int(input("Quante veicoli sono entrati oggi? "))
-
-    if veicoli == 0:
-        break
+        if veicoli == 0:
+            break
     
-    veicoli_entrati += veicoli
+        veicoli_entrati += veicoli
 
-print("sono passati ", veicoli_entrati, "veicoli ")
+    print("sono passati ", veicoli_entrati, "veicoli ")
+except:
+    print('''scriva un numero senza nessun spazio''')
