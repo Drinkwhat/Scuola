@@ -2,23 +2,26 @@
 
 #include <time.h>
 #include <stdio.h>
-#include <stdbool.h>
 #include <unistd.h>
 
 void main(){
-	int lista[7] = {43, 45,22, 543, 11, 6, 7};
+	int n = 7;
+	int lista[n] = {43, 45,22, 543, 11, 6, 7};
 	int i = 0;
 	int x, y;
-	int j = 0;
 	int b = 0;
 	char ordine;
 	printf("Ordine decresente o cresente (d o c): ");
 	scanf("%c", &ordine);
 	
+	double time_spent = 0.0;
+ 
+    clock_t begin = clock();
+	
 	if (ordine == 'd'){
-		for (b; b < 7; b++){
+		for (b; b < n; b++){
 			
-			for (i; i < 6; i++){
+			for (i; i < n-1; i++){
 				if (lista[i] < lista[i+1]){
 					x = lista[i];
 					y = lista[i+1];
@@ -29,10 +32,11 @@ void main(){
 			i = 0;
 		}
 	}
+	
 	else if (ordine == 'c'){
-		for (b; b < 7; b++){
+		for (b; b < n; b++){
 			
-			for (i; i < 6; i++){
+			for (i; i < n-1; i++){
 				if (lista[i] > lista[i+1]){
 					x = lista[i];
 					y = lista[i+1];
@@ -48,14 +52,13 @@ void main(){
 	
 	}
     if (ordine == 'd' || ordine == 'c'){
-    	for (j; j < 7; j++){
-    		printf("%d ", lista[j]);
+    	for (i; i < n; i++){
+    		printf("%d ", lista[i]);
     		
     	}
     }
-    double time_spent = 0.0;
- 
-    clock_t begin = clock();
+    	
+    
  
     
     sleep(3);
