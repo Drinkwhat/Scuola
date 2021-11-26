@@ -54,3 +54,22 @@ main()
 	}
 }
 
+// Scrivere un programma che permetta di visualizzare le prime n righe del triangolo di tartaglia 
+//(con n inserito da tastiera).
+
+#include <stdio.h>
+void main(){
+	int i = 1;
+	int j = 1;
+	int volte = 1;
+	int risultato = 1;
+	for(i; i <= volte; i++ ){
+		int lista[i] = risultato;
+		int list[i+1];
+		for(j; j <= i; j++){
+			printf(" %d ", lista[j]);
+		}
+		printf("\n");
+	}
+}
+
